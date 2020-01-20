@@ -85,22 +85,9 @@ class TicTacToe
     !won? && full?
   end
 
-
-  #   if full? && !won?
-  #     return true
-  #   end
-  #   if won?
-  #     return false
-  #   end
-  #   if !won? && !full?
-  #     return false
-  #   end
-  # end
-
   def over?
-    if won? || full? || draw?
-      return true
-    end
+
+    draw? || won?
   end
 
   def winner
