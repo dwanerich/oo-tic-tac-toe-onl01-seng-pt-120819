@@ -76,7 +76,7 @@ class TicTacToe
   end
 
   def full?
-    @board.all? {|move| move == " "}
+    @board.none? {|move| move == " "}
   end
 
   def draw?
