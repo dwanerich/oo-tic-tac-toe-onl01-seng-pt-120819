@@ -93,12 +93,6 @@ class TicTacToe
   def winner
     if won?
       @board[won?[0]] == "X" ? "X" : "O"
-
-    # winning_array = won?
-    # if winning_array
-    #   win_index = winning_array[0]
-    #   @board[win_index]
-    # end
   end
 
   def play
@@ -107,7 +101,7 @@ class TicTacToe
       turn
     end
     if won?
-      puts "Congratulations #{winner}!"
+    "Congratulations #{winner}!"
     elsif draw?
       "Cat's Game!"
     end
