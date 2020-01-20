@@ -37,8 +37,10 @@ class TicTacToe
   end
 
   def valid_move?(index)
-    return nil if index < 0 || index > 8
-    !position_taken?(index)
+    # return nil if index < 0 || index > 8
+    # !position_taken?(index)
+
+    index.between(0,8) && !position_taken?(index)
   end
 
   def turn
