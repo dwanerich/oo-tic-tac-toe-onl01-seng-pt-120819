@@ -75,8 +75,9 @@ class TicTacToe
     end
   end
 
-  def full?
-    @board.none? {|move| move == " "}
+  def full?(board)
+    @board.all? do |position|
+      position == "X" || position == "O"
   end
 
   def draw?
