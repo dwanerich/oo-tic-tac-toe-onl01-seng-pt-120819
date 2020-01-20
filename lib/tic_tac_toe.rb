@@ -65,17 +65,14 @@ class TicTacToe
 
   def won?
 
-    WIN_COMBINATIONS.each do |combo|
+    WIN_COMBINATIONS.detect do |combo|
       first_cell = @board[combo[0]]
       second_cell = @board[combo[1]]
       third_cell = @board[combo[2]]
 
-      chance = [first_cell, second_cell, third_cell]
-      if chance.uniq.size == 1 && first_cell != " "
-        return combo
-      end
+      first_cell == "X" && second_cell == "X" && third_cell == "X" ||
+      first_cell == "O" && second_cell == "O" && third_cell == "O"
     end
-    false
   end
 
   def full?
